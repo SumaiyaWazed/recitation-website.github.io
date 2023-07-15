@@ -1,0 +1,868 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Baloo+Bhai+2&family=Nunito:ital,wght@0,700;1,500&family=Open+Sans:ital@1&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto+Mono:wght@700&family=Ubuntu:ital@1&display=swap');
+
+body {
+    background-color: rgb(238, 237, 236);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* ------ navbar style start ------ */
+nav {
+    display: flex;
+    height: 60px;
+    background-color: #1C0D10;
+    color: white;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    margin-left: 160px;
+    cursor: pointer;
+}
+
+.brand img {
+    width: 70px;
+    padding: 0 8px;
+}
+
+nav ul {
+    display: flex;
+    margin-left: 40px;
+}
+
+nav ul li {
+    position: relative;
+    list-style: none;
+    font-size: 19px;
+    padding: 6px 19px;
+    margin-right: 44px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(211, 214, 241);
+    font-weight: 500;
+}
+
+.nav-list::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background-color: rgb(211, 214, 241);
+    transition: 0.5s;
+}
+
+.nav-list:hover:after,
+.nav-list.active::after {
+    width: 100%;
+}
+
+.nav-bar {
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.nav-bar {
+    display: none;
+}
+
+@media (max-width : 768px) {
+    .brand {
+        margin-left: 65px;
+    }
+
+    nav ul {
+        margin-left: 36px;
+    }
+
+    nav ul li {
+        margin-right: 16px;
+    }
+}
+
+@media (max-width: 425px) {
+    .navs {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 0;
+        background: #1c0d10d7;
+        margin-left: 0;
+        transition: 0.2s;
+        z-index: 1;
+    }
+
+    .navs.open {
+        height: 185px;
+    }
+
+    .navs ul li {
+        display: inline;
+        width: 92px;
+        padding: 4px;
+        margin: 6px 0px;
+    }
+
+    .navs ul {
+        flex-direction: column;
+        margin-left: 166px;
+        text-align: center;
+        opacity: 0;
+        transition: 0.2s;
+    }
+
+    .navs.open ul {
+        opacity: 1;
+    }
+
+    .nav-bar {
+        display: block;
+        position: absolute;
+        right: 0;
+        margin-right: 30px;
+    }
+
+    .brand {
+        margin-left: 12px;
+    }
+}
+
+@media (max-width: 375px) {
+    .navs ul {
+        margin-left: 146px;
+    }
+
+    .navs {
+        transition: 0.2s;
+    }
+
+}
+
+@media (max-width: 320px) {
+    .navs ul {
+        margin-left: 119px;
+    }
+
+    .navs {
+        transition: 0.2s;
+    }
+
+}
+
+/* ------ navbar style end ------ */
+/* ------ container style start ------ */
+
+.container {
+    min-height: 69vh;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 25px auto;
+    width: 70%;
+    border-radius: 12px;
+    padding: 34px;
+    background-image: url("../images/bg.jpg");
+}
+
+.songlist h1 {
+    word-spacing: 6px;
+}
+
+.songitemcontainer {
+    margin-top: 75px;
+}
+
+.songItem {
+    height: 50px;
+    display: flex;
+    background-color: #e9eaf3;
+    width: 40%;
+    color: #361621;
+    margin-top: 12px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+}
+
+.bg-songItem {
+    background-color: #e6d1d9;
+    box-shadow: inset 0 0 5px #be879d,
+        inset 0 0 10px #be879d,
+        inset 0 0 15px #be879d;
+}
+
+.songItem img {
+    width: 48px;
+    margin: 0 4px;
+    border-radius: 30px;
+}
+
+.songName {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.hide {
+    display: block;
+}
+
+.timestamp {
+    font-size: 14px;
+}
+
+.songlistplay i {
+    font-size: 17px;
+    margin: 0px 10px 0px 6px;
+}
+
+@media (max-width: 1024px) {
+    .songItem {
+        width: 58%;
+        height: 52px;
+    }
+
+    .songName {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .songName {
+        font-size: 17px;
+    }
+
+    .songItem {
+        width: 67%;
+        height: 54px;
+    }
+
+}
+
+@media (max-width: 425px) {
+    .songlist h1 {
+        font-size: 20px;
+    }
+
+    .songItem {
+        width: 100%;
+    }
+
+    .songName {
+        font-size: 16px;
+    }
+
+    .songlistplay i {
+        font-size: 15px;
+    }
+
+    .songlistplay {
+        margin-left: 10px;
+    }
+
+}
+
+@media (max-width: 320px) {
+    .songName {
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .timestamp {
+        font-size: 12px;
+    }
+
+    .songlistplay i {
+        font-size: 14px;
+    }
+}
+
+/* ------ container style end ------ */
+/* ------ audio controls style start ------ */
+
+.bottom {
+    position: relative;
+    position: sticky;
+    height: 110px;
+    background-color: #0B0507;
+    color: rgb(211, 214, 241);
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.icons {
+    margin-top: 10px;
+    color: rgb(211, 214, 241);
+}
+
+#previous {
+    opacity: 30%;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+#next {
+    opacity: 30%;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+#previous:active {
+    color: #835f6c;
+}
+
+#masterPlay {
+    transition: 0.5s;
+}
+
+#masterPlay:active {
+    color: #835f6c;
+}
+
+#next:active {
+    color: #835f6c;
+}
+
+.icons i {
+    cursor: pointer;
+    padding: 6px;
+}
+
+#myProgressBar {
+    width: 80vw;
+    cursor: pointer;
+}
+
+.songinfo {
+    position: absolute;
+    bottom: 8px;
+    display: flex;
+    left: 6vw;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.songinfo img {
+    opacity: 0;
+    margin-top: 10px;
+    transition: opacity 0.4s ease-in;
+}
+
+.songinfo span {
+    padding-top: 27px;
+    padding-left: 16px;
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
+
+@media (max-width: 768px) {
+    .bottom {
+        height: 128px;
+    }
+
+    .songinfo {
+        flex-direction: column;
+    }
+
+    .songinfo span {
+        padding-top: 0px;
+        padding-left: 0px;
+    }
+
+    .songinfo img {
+        margin-top: 0;
+        margin-right: 108px;
+    }
+
+    .icons {
+        z-index: 1;
+        margin-left: 10px;
+    }
+
+}
+
+@media (max-width: 425px) {
+    .icons i {
+        font-size: 40px;
+    }
+
+    .songitemcontainer {
+        margin-top: 28px;
+    }
+
+    .songinfo img {
+        height: 42px;
+        width: 65px;
+    }
+
+}
+
+@media (max-width: 375px) {
+    .songinfo img {
+        margin-right: 0;
+    }
+
+    .icons {
+        z-index: 1;
+        margin-left: 15px;
+    }
+
+    .songinfo span {
+        padding-left: 0px;
+    }
+
+    .songinfo img {
+        height: 42px;
+        width: 65px;
+    }
+
+}
+
+@media (max-width: 320px) {
+    .icons {
+        margin-left: 20px;
+    }
+
+    .icons i {
+        font-size: 34px;
+    }
+
+    .songinfo img {
+        height: 42px;
+        width: 65px;
+    }
+
+    .songinfo span {
+        font-size: 14px;
+    }
+
+}
+
+/* ------ audio controls style end ------ */
+
+/* ----- about section style start ----- */
+.about-section {
+    display: flex;
+    text-align: center;
+}
+
+.about-box {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8%;
+    margin-bottom: 8%;
+}
+
+.about-box h1 {
+    font-size: 32px;
+    color: #532436;
+}
+
+.about-box p {
+    font-size: 18px;
+    color: #361621;
+    padding: 30px;
+    margin: 0px 24%;
+    text-align: justify;
+    word-spacing: 5px;
+    line-height: 26px;
+}
+
+.about-box p span {
+    font-weight: 600;
+}
+
+.footer {
+    width: 100%;
+}
+
+.footer hr {
+    opacity: 20%;
+}
+
+.footer-content {
+    display: flex;
+    margin: 10px 50px;
+}
+
+.content p {
+    width: 420px;
+    margin: 30px 80px;
+    font-size: 18px;
+    text-align: justify;
+    color: #532436;
+}
+
+.contents {
+    margin: 30px 150px;
+    font-size: 18px;
+    text-align: justify;
+    color: #532436;
+}
+
+.contents h3 {
+    font-size: 16px;
+    color: #532436;
+}
+
+.contents ul li {
+    list-style: none;
+    padding-top: 4px;
+}
+
+.contents ul li a {
+    text-decoration: none;
+    color: #532436;
+}
+
+@media (max-width: 1440px) {
+    .content p {
+        margin: 30px 22px;
+    }
+
+    .contents {
+        margin: 30px 110px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .about-box p {
+        margin: 0px 9%;
+    }
+
+    .content p {
+        width: 266px;
+        margin: 30px 22px;
+        font-size: 16px;
+    }
+
+    .contents {
+        margin: 30px 66px;
+        font-size: 15px;
+    }
+
+    .contents h3 {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 425px) {
+    .about-box h1 {
+        font-size: 22px;
+    }
+
+    .about-box p {
+        margin: 0;
+        font-size: 14px;
+        word-spacing: 3px;
+        line-height: 20px;
+    }
+}
+
+@media (max-width: 320px) {
+    .about-box h1 {
+        font-size: 17px;
+    }
+
+    .about-box p {
+        line-height: 18px;
+        font-size: 13px;
+        word-spacing: 2px;
+        padding: 15px;
+    }
+
+}
+
+/* ----- services ------- */
+.service-box h1 {
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 30px;
+    color: #532436;
+}
+
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin: 50px 10%;
+}
+
+.service-list div {
+    background: #4C2333;
+    color: #fcf5f5;
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.service-list div:hover {
+    background: #411c2a;
+}
+
+.service-list div h2 {
+    font-size: 18px;
+}
+
+.service-list div p {
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.service-list div a {
+    text-decoration: none;
+    color: #fff;
+    margin-top: 18px;
+}
+
+@media (max-width: 425px) {
+
+    .service-box h1 {
+        font-size: 22px;
+    }
+
+    .service-list div h2 {
+        font-size: 15px;
+    }
+
+    .service-list div p {
+        font-size: 13px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        margin: 0px 10px;
+    }
+
+    .content p {
+        width: 222px;
+    }
+
+    .contents {
+        margin: 30px 36px;
+    }
+
+}
+
+@media (max-width: 425px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .content p {
+        text-align: center;
+        width: 364px;
+        margin: 22px 22px 10px 22px;
+        font-size: 14px;
+    }
+
+    .contents {
+        margin: 10px 36px;
+        text-align: center;
+        font-size: 13px;
+    }
+
+}
+
+@media (max-width: 375px) {
+    .content p {
+        width: 308px;
+    }
+
+}
+
+@media (max-width: 320px) {
+    .content p {
+        width: 260px;
+        font-size: 12px;
+    }
+
+    .contents {
+        margin: 10px 36px;
+        font-size: 12px;
+    }
+
+    .contents h3 {
+        font-size: 13px;
+    }
+
+}
+
+/* ----- contact us ----- */
+.contact-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 6%;
+    margin-bottom: 6%;
+}
+
+.contact-form form {
+    width: 670px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 10px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: #632b41;
+    backdrop-filter: blur(10px);
+    flex-wrap: wrap;
+}
+
+.contact-form form h1 {
+    color: #fff;
+    font-weight: 500;
+    margin-top: 20px;
+    width: 500px;
+    text-align: center;
+}
+
+.contact-form form input {
+    width: 290px;
+    height: 40px;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    background: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+}
+
+.contact-form form input::placeholder {
+    color: #ddd;
+}
+
+.contact-form form h4 {
+    color: #fff;
+    font-weight: 300;
+    width: 600px;
+    margin-top: 20;
+}
+
+.contact-form form textarea {
+    background: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    font-weight: 200;
+    font-size: 15px;
+    padding: 10px;
+    outline: none;
+    min-width: 600px;
+    max-width: 600px;
+    min-height: 80px;
+    max-height: 80px;
+}
+
+.contact-form form #button {
+    border: none;
+    background: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #333;
+    width: 100px;
+    padding: 0;
+    margin-right: 500px;
+    margin-bottom: 30px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.contact-form form #button:hover {
+    opacity: 0.80;
+}
+
+@media (max-width: 768px) {
+    .contact-form {
+        margin-bottom: 8%;
+    }
+
+    .contact-form form {
+        width: 416px;
+        height: 423px;
+    }
+
+    .contact-form form textarea {
+        min-width: 285px;
+        max-width: 285px;
+        min-height: 50px;
+        max-height: 51px;
+    }
+
+    .contact-form form h4 {
+        width: 299px;
+        font-size: 14px;
+    }
+
+    .contact-form form #button {
+        font-size: 17px;
+        margin-right: 213px;
+    }
+
+}
+
+@media (max-width: 425px) {
+    .contact-form form {
+        width: 331px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+
+}
+
+@media (max-width: 320px) {
+    .contact-form form {
+        width: 294px;
+        height: 392px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .contact-form form h1 {
+        font-size: 18px;
+    }
+
+    .contact-form form input {
+        width: 252px;
+        height: 37px;
+        padding-left: 0px;
+        font-size: 13px;
+        margin-left: 2px;
+    }
+    .contact-form form h4 {
+        width: 257px;
+        font-size: 13px;
+    }
+    .contact-form form textarea {
+        min-width: 230px;
+        max-width: 230px;
+    }
+    .contact-form form #button {
+        font-size: 16px;
+        margin-right: 149px;
+    }
+
+}
