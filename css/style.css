@@ -216,10 +216,6 @@ nav ul li a {
     cursor: pointer;
 }
 
-.hide {
-    display: block;
-}
-
 .timestamp {
     font-size: 14px;
 }
@@ -253,6 +249,9 @@ nav ul li a {
 }
 
 @media (max-width: 425px) {
+    .songitemcontainer {
+        margin-top: 28px;
+    }
     .songlist h1 {
         font-size: 20px;
     }
@@ -294,7 +293,6 @@ nav ul li a {
 /* ------ audio controls style start ------ */
 
 .bottom {
-    position: relative;
     position: sticky;
     height: 110px;
     background-color: #0B0507;
@@ -400,10 +398,6 @@ nav ul li a {
 @media (max-width: 425px) {
     .icons i {
         font-size: 40px;
-    }
-
-    .songitemcontainer {
-        margin-top: 28px;
     }
 
     .songinfo img {
