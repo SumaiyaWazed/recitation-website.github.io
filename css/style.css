@@ -77,91 +77,6 @@ nav ul li a {
     display: none;
 }
 
-@media (max-width : 768px) {
-    .brand {
-        margin-left: 65px;
-    }
-
-    nav ul {
-        margin-left: 36px;
-    }
-
-    nav ul li {
-        margin-right: 16px;
-    }
-}
-
-@media (max-width: 425px) {
-    .navs {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        width: 100vw;
-        height: 0;
-        background: #1c0d10d7;
-        margin-left: 0;
-        transition: 0.2s;
-        z-index: 1;
-    }
-
-    .navs.open {
-        height: 185px;
-    }
-
-    .navs ul li {
-        display: inline;
-        width: 92px;
-        padding: 4px;
-        margin: 6px 0px;
-    }
-
-    .navs ul {
-        flex-direction: column;
-        margin-left: 166px;
-        text-align: center;
-        opacity: 0;
-        transition: 0.2s;
-    }
-
-    .navs.open ul {
-        opacity: 1;
-    }
-
-    .nav-bar {
-        display: block;
-        position: absolute;
-        right: 0;
-        margin-right: 30px;
-    }
-
-    .brand {
-        margin-left: 12px;
-    }
-}
-
-@media (max-width: 375px) {
-    .navs ul {
-        margin-left: 146px;
-    }
-
-    .navs {
-        transition: 0.2s;
-    }
-
-}
-
-@media (max-width: 320px) {
-    .navs ul {
-        margin-left: 119px;
-    }
-
-    .navs {
-        transition: 0.2s;
-    }
-
-}
-
 /* ------ navbar style end ------ */
 /* ------ container style start ------ */
 
@@ -223,70 +138,6 @@ nav ul li a {
 .songlistplay i {
     font-size: 17px;
     margin: 0px 10px 0px 6px;
-}
-
-@media (max-width: 1024px) {
-    .songItem {
-        width: 58%;
-        height: 52px;
-    }
-
-    .songName {
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 768px) {
-    .songName {
-        font-size: 17px;
-    }
-
-    .songItem {
-        width: 67%;
-        height: 54px;
-    }
-
-}
-
-@media (max-width: 425px) {
-    .songitemcontainer {
-        margin-top: 28px;
-    }
-    .songlist h1 {
-        font-size: 20px;
-    }
-
-    .songItem {
-        width: 100%;
-    }
-
-    .songName {
-        font-size: 16px;
-    }
-
-    .songlistplay i {
-        font-size: 15px;
-    }
-
-    .songlistplay {
-        margin-left: 10px;
-    }
-
-}
-
-@media (max-width: 320px) {
-    .songName {
-        font-size: 12px;
-        font-weight: bold;
-    }
-
-    .timestamp {
-        font-size: 12px;
-    }
-
-    .songlistplay i {
-        font-size: 14px;
-    }
 }
 
 /* ------ container style end ------ */
@@ -369,84 +220,6 @@ nav ul li a {
     transition: opacity 0.4s ease-in;
 }
 
-@media (max-width: 768px) {
-    .bottom {
-        height: 128px;
-    }
-
-    .songinfo {
-        flex-direction: column;
-    }
-
-    .songinfo span {
-        padding-top: 0px;
-        padding-left: 0px;
-    }
-
-    .songinfo img {
-        margin-top: 0;
-        margin-right: 108px;
-    }
-
-    .icons {
-        z-index: 1;
-        margin-left: 10px;
-    }
-
-}
-
-@media (max-width: 425px) {
-    .icons i {
-        font-size: 40px;
-    }
-
-    .songinfo img {
-        height: 42px;
-        width: 65px;
-    }
-
-}
-
-@media (max-width: 375px) {
-    .songinfo img {
-        margin-right: 0;
-    }
-
-    .icons {
-        z-index: 1;
-        margin-left: 15px;
-    }
-
-    .songinfo span {
-        padding-left: 0px;
-    }
-
-    .songinfo img {
-        height: 42px;
-        width: 65px;
-    }
-
-}
-
-@media (max-width: 320px) {
-    .icons {
-        margin-left: 20px;
-    }
-
-    .icons i {
-        font-size: 34px;
-    }
-
-    .songinfo img {
-        height: 42px;
-        width: 65px;
-    }
-
-    .songinfo span {
-        font-size: 14px;
-    }
-
-}
 
 /* ------ audio controls style end ------ */
 
@@ -525,64 +298,6 @@ nav ul li a {
     color: #532436;
 }
 
-@media (max-width: 1440px) {
-    .content p {
-        margin: 30px 22px;
-    }
-
-    .contents {
-        margin: 30px 110px;
-    }
-}
-
-@media (max-width: 1024px) {
-    .about-box p {
-        margin: 0px 9%;
-    }
-
-    .content p {
-        width: 266px;
-        margin: 30px 22px;
-        font-size: 16px;
-    }
-
-    .contents {
-        margin: 30px 66px;
-        font-size: 15px;
-    }
-
-    .contents h3 {
-        font-size: 15px;
-    }
-}
-
-@media (max-width: 425px) {
-    .about-box h1 {
-        font-size: 22px;
-    }
-
-    .about-box p {
-        margin: 0;
-        font-size: 14px;
-        word-spacing: 3px;
-        line-height: 20px;
-    }
-}
-
-@media (max-width: 320px) {
-    .about-box h1 {
-        font-size: 17px;
-    }
-
-    .about-box p {
-        line-height: 18px;
-        font-size: 13px;
-        word-spacing: 2px;
-        padding: 15px;
-    }
-
-}
-
 /* ----- services ------- */
 .service-box h1 {
     display: block;
@@ -626,81 +341,6 @@ nav ul li a {
     text-decoration: none;
     color: #fff;
     margin-top: 18px;
-}
-
-@media (max-width: 425px) {
-
-    .service-box h1 {
-        font-size: 22px;
-    }
-
-    .service-list div h2 {
-        font-size: 15px;
-    }
-
-    .service-list div p {
-        font-size: 13px;
-    }
-
-}
-
-@media (max-width: 768px) {
-    .footer-content {
-        margin: 0px 10px;
-    }
-
-    .content p {
-        width: 222px;
-    }
-
-    .contents {
-        margin: 30px 36px;
-    }
-
-}
-
-@media (max-width: 425px) {
-    .footer-content {
-        flex-direction: column;
-    }
-
-    .content p {
-        text-align: center;
-        width: 364px;
-        margin: 22px 22px 10px 22px;
-        font-size: 14px;
-    }
-
-    .contents {
-        margin: 10px 36px;
-        text-align: center;
-        font-size: 13px;
-    }
-
-}
-
-@media (max-width: 375px) {
-    .content p {
-        width: 308px;
-    }
-
-}
-
-@media (max-width: 320px) {
-    .content p {
-        width: 260px;
-        font-size: 12px;
-    }
-
-    .contents {
-        margin: 10px 36px;
-        font-size: 12px;
-    }
-
-    .contents h3 {
-        font-size: 13px;
-    }
-
 }
 
 /* ----- contact us ----- */
@@ -791,7 +431,100 @@ nav ul li a {
     opacity: 0.80;
 }
 
-@media (max-width: 768px) {
+ /* ----- responsive code ----- */
+
+@media (max-width: 1440px) {
+    .content p {
+        margin: 30px 22px;
+    }
+
+    .contents {
+        margin: 30px 110px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .songItem {
+        width: 58%;
+        height: 52px;
+    }
+
+    .songName {
+        font-size: 18px;
+    }
+    .about-box p {
+        margin: 0px 9%;
+    }
+
+    .content p {
+        width: 266px;
+        margin: 30px 22px;
+        font-size: 16px;
+    }
+
+    .contents {
+        margin: 30px 66px;
+        font-size: 15px;
+    }
+
+    .contents h3 {
+        font-size: 15px;
+    }
+}
+
+@media (max-width : 768px) {
+    .brand {
+        margin-left: 65px;
+    }
+
+    nav ul {
+        margin-left: 36px;
+    }
+
+    nav ul li {
+        margin-right: 16px;
+    }
+    .songName {
+        font-size: 17px;
+    }
+
+    .songItem {
+        width: 67%;
+        height: 54px;
+    }
+    .bottom {
+        height: 128px;
+    }
+
+    .songinfo {
+        flex-direction: column;
+    }
+
+    .songinfo span {
+        padding-top: 0px;
+        padding-left: 0px;
+    }
+
+    .songinfo img {
+        margin-top: 0;
+        margin-right: 108px;
+    }
+
+    .icons {
+        z-index: 1;
+        margin-left: 10px;
+    }
+    .footer-content {
+        margin: 0px 10px;
+    }
+
+    .content p {
+        width: 222px;
+    }
+
+    .contents {
+        margin: 30px 36px;
+    }
     .contact-form {
         margin-bottom: 8%;
     }
@@ -821,6 +554,120 @@ nav ul li a {
 }
 
 @media (max-width: 425px) {
+    .navs {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 0;
+        background: #1c0d10d7;
+        margin-left: 0;
+        transition: 0.2s;
+        z-index: 1;
+    }
+
+    .navs.open {
+        height: 185px;
+    }
+
+    .navs ul li {
+        display: inline;
+        width: 92px;
+        padding: 4px;
+        margin: 6px 0px;
+    }
+
+    .navs ul {
+        flex-direction: column;
+        margin-left: 166px;
+        text-align: center;
+        opacity: 0;
+        transition: 0.2s;
+    }
+
+    .navs.open ul {
+        opacity: 1;
+    }
+
+    .nav-bar {
+        display: block;
+        position: absolute;
+        right: 0;
+        margin-right: 30px;
+    }
+
+    .brand {
+        margin-left: 12px;
+    }
+    .songitemcontainer {
+        margin-top: 28px;
+    }
+    .songlist h1 {
+        font-size: 20px;
+    }
+
+    .songItem {
+        width: 100%;
+    }
+
+    .songName {
+        font-size: 16px;
+    }
+
+    .songlistplay i {
+        font-size: 15px;
+    }
+
+    .songlistplay {
+        margin-left: 10px;
+    }
+    .icons i {
+        font-size: 40px;
+    }
+
+    .songinfo img {
+        height: 42px;
+        width: 65px;
+    }
+    .about-box h1 {
+        font-size: 22px;
+    }
+
+    .about-box p {
+        margin: 0;
+        font-size: 14px;
+        word-spacing: 3px;
+        line-height: 20px;
+    }
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .content p {
+        text-align: center;
+        width: 364px;
+        margin: 22px 22px 10px 22px;
+        font-size: 14px;
+    }
+
+    .contents {
+        margin: 10px 36px;
+        text-align: center;
+        font-size: 13px;
+    }
+    
+    .service-box h1 {
+        font-size: 22px;
+    }
+
+    .service-list div h2 {
+        font-size: 15px;
+    }
+
+    .service-list div p {
+        font-size: 13px;
+    }
     .contact-form form {
         width: 331px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
@@ -828,7 +675,96 @@ nav ul li a {
 
 }
 
+@media (max-width: 375px) {
+    .navs ul {
+        margin-left: 146px;
+    }
+
+    .navs {
+        transition: 0.2s;
+    }
+    .songinfo img {
+        margin-right: 0;
+    }
+
+    .icons {
+        z-index: 1;
+        margin-left: 15px;
+    }
+
+    .songinfo span {
+        padding-left: 0px;
+    }
+
+    .songinfo img {
+        height: 42px;
+        width: 65px;
+    }
+    .content p {
+        width: 308px;
+    }
+
+}
+
 @media (max-width: 320px) {
+    .navs ul {
+        margin-left: 119px;
+    }
+
+    .navs {
+        transition: 0.2s;
+    }
+    .songName {
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .timestamp {
+        font-size: 12px;
+    }
+
+    .songlistplay i {
+        font-size: 14px;
+    }
+    .icons {
+        margin-left: 20px;
+    }
+
+    .icons i {
+        font-size: 34px;
+    }
+
+    .songinfo img {
+        height: 42px;
+        width: 65px;
+    }
+
+    .songinfo span {
+        font-size: 14px;
+    }
+    .about-box h1 {
+        font-size: 17px;
+    }
+
+    .about-box p {
+        line-height: 18px;
+        font-size: 13px;
+        word-spacing: 2px;
+        padding: 15px;
+    }
+    .content p {
+        width: 260px;
+        font-size: 12px;
+    }
+
+    .contents {
+        margin: 10px 36px;
+        font-size: 12px;
+    }
+
+    .contents h3 {
+        font-size: 13px;
+    }
     .contact-form form {
         width: 294px;
         height: 392px;
